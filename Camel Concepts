@@ -1,0 +1,15 @@
+
+Camel Context: Runtime system that keeps all pieces together.
+
+Message: Fundamental entity – core principle of messaging. It consists of Headers, Body and Attachments.
+
+Exchange: Container for messages (abstraction of what is actually sent over the system). It contains In and optionally also Out message.
+
+Route: Chain of processors. If you like more “academic” explanation then route is a graph, where “node” is represented by some Processor and “line” is represented by some Channel.
+
+Processor: Uses/modifies incoming exchange. Output of one processor is connected to the input of another one.
+
+Endpoint: Models end of channel. Configured using URI. Example:
+file:data/inbox?delay=5000
+
+Component: Factory for endpoints. Referred with prefixes (jms:, file:, etc.).
